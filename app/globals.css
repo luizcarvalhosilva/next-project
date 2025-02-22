@@ -200,7 +200,6 @@
 
   .pattern {
     background-image: linear-gradient(-45deg,
-        /* Ângulo ajustado para inverter a direção da diagonal */
         transparent 49.5%,
         rgba(251, 232, 67, 0.2) 49.5%,
         rgba(251, 232, 67, 0.6) 50.5%,
