@@ -6,7 +6,7 @@ import slugify from "slugify";
 import { writeClient } from "@/sanity/lib/write-client";
 
 export const createPitch = async (state: any, form: FormData, pitch: string) => {
-    const session = await auth
+    const session = await auth();
 
     if (!session) return parseServerActionResponse({
         error: "Não está logado", status: "ERROR"
