@@ -1,6 +1,6 @@
 import { auth } from "@/auth";
 import StartupForm from "@/components/StartupForm";
-import { redirect } from "next/dist/server/api-utils";
+import { redirect } from "next/navigation";
 
 async function Page() {
 
