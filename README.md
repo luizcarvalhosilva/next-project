@@ -20,6 +20,21 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Type Generation (prebuild)
+
+This project uses Sanity as a CMS and includes a typegen command that automatically generates TypeScript types based on your schema.
+This is usually triggered using a prebuild script before building the app. However, the prebuild step has been removed from package.json to prevent deployment errors on platforms like Vercel (related to ESM support and esbuild-register).
+
+If you want to run it locally, you can use:
+
+```bash
+npm run typegen
+```
+Or re-enable the prebuild step by adding this to your package.json:
+```bash
+"prebuild": "npm run typegen"
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
